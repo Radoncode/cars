@@ -1,14 +1,14 @@
 const Car = ({ nom, color, year }) => {
 
-    const colorInfo = color ? (<p>couleur: { color } </p>) : (<p>Couleur: Néant </p>);
+    const colorInfo = color ? (`couleur:  ${color }`) : (<p>Couleur: Néant </p>);
 
     if (nom) {
         return (
-            <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto' }}>
-                <p>marque: { nom }</p>
-                <p>age: { year }</p>
-                { colorInfo }
-            </div>
+            <tr>
+                <td>marque: { nom }</td>
+                <td>age: { year }</td>
+                <td>{ colorInfo }</td>
+            </tr>
         )
     } else {
         return  null;
